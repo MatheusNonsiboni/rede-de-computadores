@@ -78,7 +78,7 @@ def _enviar_sessao_tcp(ip, porta, caminho, tam_bloco) -> dict:
                 blocos_lidos += 1
                 if enviar_bloco_com_ack(sock, bloco):
                     blocos_enviados += 1
-                    
+
         resultado = receber_exato(sock, 20).decode("utf-8", errors="ignore").strip()
 
     return {
@@ -104,6 +104,7 @@ def _enviar_sessao_udp(ip, porta, caminho, tam_bloco) -> dict:
     inicio = time.time()
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65536)
         sock.settimeout(TIMEOUT)
 
         meta = montar_metadados(nome_arquivo, tamanho_total, hash_hex)
@@ -126,6 +127,7 @@ def _enviar_sessao_udp(ip, porta, caminho, tam_bloco) -> dict:
                     blocos_enviados += 1
 
         try:
+            sock.settimeout(3)
             resultado = sock.recvfrom(64)[0].decode("utf-8", errors="ignore").strip()
         except socket.timeout:
             resultado = "TIMEOUT_INTEGRIDADE"
@@ -320,6 +322,7 @@ def modo_recepcao(porta, proto):
     else:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
             sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65536)
             sock.bind(("0.0.0.0", porta))
             print(f"\n[{nome_proto}] Aguardando datagramas na porta {porta}...")
 
