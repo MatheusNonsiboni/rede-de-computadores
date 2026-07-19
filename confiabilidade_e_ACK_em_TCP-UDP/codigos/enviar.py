@@ -70,7 +70,6 @@ def rodar_udp(ip: str, porta: int, n: int):
 
     return perdidos, retrans, total, time.time() - inicio
 
-
 def main():
     ip = input("\nIP: ")
     porta = int(input("Porta: "))
@@ -99,7 +98,6 @@ def main():
     total_geral = sum(r[3] for r in resultados)
     print(f"\nCONTABILIDADE FINAL ({nome})")
     print(f"Total de pacotes (dados + retransmissões + ACKs): {total_geral}")
-
 
 if __name__ == "__main__":
     main()
