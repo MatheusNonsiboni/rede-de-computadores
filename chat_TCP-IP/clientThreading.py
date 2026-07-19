@@ -42,7 +42,7 @@ except Exception as e:
     tcp.close()
     exit()
 
-print("Conectado! Envie uma mensagem\n")
+print("Conectado\n")
 print("Digite 'sair' para encerrar o chat")
 
 thread_receber = threading.Thread(target=receber_mensagem, daemon=True)
@@ -57,8 +57,9 @@ while True:
     if mensagem_enviar.lower() == "sair":
         break
 
-tcp.close()
+thread_receber.join(timeout=2)
 
+tcp.close()
 
 print("\nRELATÓRIO FINAL")
 print(f"Pacotes enviados: {pacotes_enviados}")

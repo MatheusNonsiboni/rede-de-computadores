@@ -68,6 +68,7 @@ while True:
     if mensagem_enviar.lower() == "sair":
         break
 
+thread_receber.join(timeout=2)
 
 conexao.close()
 tcp.close()
