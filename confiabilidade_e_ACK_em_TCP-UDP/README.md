@@ -140,4 +140,4 @@ O emissor então dispara automaticamente as três baterias de teste (10, 100 e 1
 
 ## Autores
 
-Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão
+Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão.

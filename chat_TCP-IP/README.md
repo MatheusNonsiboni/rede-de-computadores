@@ -137,3 +137,7 @@ python3 clientThreading.py
 Serão solicitados o IP do servidor (use `127.0.0.1` se estiver testando na mesma máquina) e a mesma porta escolhida no servidor.
 
 A partir daí, basta digitar mensagens em qualquer um dos dois terminais e pressionar Enter para enviá-las. Digite `sair` em qualquer lado para encerrar a conversa nos dois processos.
+
+## Autores
+
+Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão.

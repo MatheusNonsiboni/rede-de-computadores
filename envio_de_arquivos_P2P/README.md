@@ -131,3 +131,7 @@ Responda às perguntas:
 - `Realizar outra bateria? (s/n):` — permite repetir o envio do mesmo arquivo com um tamanho de bloco diferente, útil para comparar desempenho, sem reiniciar o programa.
 
 O arquivo recebido é salvo na pasta do script do receptor com o prefixo `recebido_` (ex: `recebido_longday.jpg`). Ao final de cada bateria, ambos os lados exibem seus respectivos relatórios de execução.
+
+## Autores
+
+Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão.
