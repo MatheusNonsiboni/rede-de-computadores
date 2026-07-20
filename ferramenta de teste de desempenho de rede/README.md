@@ -120,4 +120,4 @@ O teste roda automaticamente por 20 segundos a partir do início do envio, usand
 
 ## Autores
 
-Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão.
+Implementação desenvolvida por mim; relatório e análise de resultados desenvolvidos em conjunto com Marcela de Oliveira Dorigão.

@@ -134,4 +134,4 @@ O arquivo recebido é salvo na pasta do script do receptor com o prefixo `recebi
 
 ## Autores
 
-Essa aplicação foi desenvolvida em conjunto com Marcela de Oliveira Dorigão.
+Implementação desenvolvida por mim; relatório e análise de resultados desenvolvidos em conjunto com Marcela de Oliveira Dorigão.
